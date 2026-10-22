@@ -27,7 +27,7 @@ class Settings(BaseSettings):
 
     # Security
     # Comma-separated list of allowed browser origins (no "*": credentials are enabled).
-    CORS_ORIGINS: str = "http://localhost:5173,http://127.0.0.1:5173,http://localhost:3000,http://127.0.0.1:8000,http://127.0.0.1:8002"
+    CORS_ORIGINS: str = "http://localhost:5173,http://127.0.0.1:5173,http://localhost:3000,http://127.0.0.1:8000,http://127.0.0.1:8002,https://atlas-frontend-delta.vercel.app"
     # If set, destructive endpoints (reset) require header  X-Admin-Key: <value>.
     ADMIN_API_KEY: Optional[str] = Field(default=None)
 
