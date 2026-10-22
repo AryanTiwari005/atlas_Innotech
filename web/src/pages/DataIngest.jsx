@@ -111,18 +111,7 @@ export default function DataIngest() {
     toast(`Loading dataset/${fileName}…`, 'info')
 
     try {
-      // In Vite dev mode, we can read the file directly or fetch if served, or read dataset
-      // We can also trigger a POST with the parsed sample
-      const res = await fetch(`/api/cases/ingest`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(SAMPLE_CASES[fileName])
-      })
-      if (!res.ok) {
-        const err = await res.json().catch(() => ({}))
-        throw new Error(err.detail || `HTTP ${res.status}`)
-      }
-      const data = await res.json()
+      const data = await api.ingestCase(SAMPLE_CASES[fileName])
       setResult(data)
       toast(`Sample ${fileName} ingested successfully!`, 'ok')
     } catch (e) {
