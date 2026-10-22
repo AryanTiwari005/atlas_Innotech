@@ -1,0 +1,337 @@
+{
+  "case_metadata": {
+    "case_id": "CASE-2024-DEMO-777",
+    "case_name": "Operation Falcon: Transnational Hawala & Smuggling Network",
+    "case_type": "ORGANIZED_CRIME",
+    "status": "UNDER_INVESTIGATION",
+    "jurisdiction": "Special Crime Branch - Narcotics & Financial Intelligence",
+    "lead_investigator": "Inspector R. K. Singhal",
+    "created_date": "2024-10-23",
+    "summary": "Live demonstration case tracking an illicit hawala syndicate using front companies, burner devices, and layered bank accounts to finance dockside contraband shipments.",
+    "tags": ["Organized_Crime", "Money_Laundering", "Hawala", "Live_Demo", "High_Priority"]
+  },
+  "fir_records": [
+    {
+      "fir_id": "FIR-2024-7701",
+      "fir_number": "7701/2024",
+      "police_station": "Port Zone Special Crime Unit",
+      "date": "2024-10-22",
+      "sections": ["PMLA Sec 3 & 4", "IPC 120B", "Customs Act Sec 135"],
+      "complainant": "Directorate of Revenue Intelligence",
+      "summary": "Interception of suspicious high-value transfers correlating with unmanifested shipping containers.",
+      "accused_person_ids": ["P-101", "P-102", "P-103"]
+    }
+  ],
+  "entities": {
+    "people": [
+      {
+        "person_id": "P-101",
+        "name": "Vikramaditya Roy",
+        "aliases": ["Vicky Kingpin", "The Banker"],
+        "dob": "1979-04-12",
+        "national_id": "ID-VIK-9001",
+        "roles": ["Financier", "Syndicate Head", "Suspect"],
+        "risk_level": "CRITICAL",
+        "notes": "Controls offshore front entities; identified as prime orchestrator."
+      },
+      {
+        "person_id": "P-102",
+        "name": "Sameer Qureshi",
+        "aliases": ["Sam", "Operator 4"],
+        "dob": "1987-11-20",
+        "national_id": "ID-SAM-3312",
+        "roles": ["Operations Coordinator", "Suspect"],
+        "risk_level": "CRITICAL",
+        "notes": "Liaison between overseas contacts and local logistics couriers."
+      },
+      {
+        "person_id": "P-103",
+        "name": "Arjun Nair",
+        "aliases": ["Shadow Courier"],
+        "dob": "1995-08-05",
+        "national_id": "ID-ARJ-5541",
+        "roles": ["Money Mule", "Courier", "Suspect"],
+        "risk_level": "HIGH",
+        "notes": "Shell account signatory used for rapid pass-through layering."
+      },
+      {
+        "person_id": "P-104",
+        "name": "Capt. Rohit Mehra",
+        "aliases": ["Port Master R"],
+        "dob": "1974-02-17",
+        "national_id": "ID-ROH-7809",
+        "roles": ["Dock Logistics Facilitator", "Person of Interest"],
+        "risk_level": "MEDIUM",
+        "notes": "Authorized port entry permissions for unauthorized container movements."
+      }
+    ],
+    "phones": [
+      {
+        "phone_number": "+919811122334",
+        "phone_id": "PH-101",
+        "imei": "IMEI-869901004411221",
+        "carrier": "Airtel Secure",
+        "registered_owner": "Apex Horizon Pvt Ltd",
+        "owner_person_id": "P-101"
+      },
+      {
+        "phone_number": "+919822233445",
+        "phone_id": "PH-102",
+        "imei": "IMEI-869901004411221",
+        "carrier": "Jio Business",
+        "registered_owner": "Sameer Qureshi",
+        "owner_person_id": "P-102"
+      },
+      {
+        "phone_number": "+919833344556",
+        "phone_id": "PH-103",
+        "imei": "IMEI-354411229988770",
+        "carrier": "Vodafone Idea",
+        "registered_owner": "Arjun Nair",
+        "owner_person_id": "P-103"
+      },
+      {
+        "phone_number": "+919844455667",
+        "phone_id": "PH-104",
+        "imei": "IMEI-490154203237510",
+        "carrier": "BSNL Fleet",
+        "registered_owner": "Capt. Rohit Mehra",
+        "owner_person_id": "P-104"
+      }
+    ],
+    "bank_accounts": [
+      {
+        "account_number": "ACC-7701-APEX",
+        "account_id": "B-101",
+        "bank_name": "Standard Chartered Bank",
+        "account_type": "CORPORATE_CURRENT",
+        "branch": "Fort Commercial Branch, Mumbai",
+        "holder_name": "Apex Horizon Trading Ltd (Vikramaditya Roy)",
+        "owner_person_id": "P-101"
+      },
+      {
+        "account_number": "ACC-7702-MULE",
+        "account_id": "B-102",
+        "bank_name": "HDFC Bank",
+        "account_type": "SAVINGS",
+        "branch": "Vashi Sector 17, Navi Mumbai",
+        "holder_name": "Arjun Nair",
+        "owner_person_id": "P-103"
+      },
+      {
+        "account_number": "ACC-7703-LOGISTICS",
+        "account_id": "B-103",
+        "bank_name": "Axis Bank",
+        "account_type": "ESCROW_COMMERCIAL",
+        "branch": "JNPT Maritime Complex",
+        "holder_name": "Blue Ocean Freight & Cargo",
+        "owner_person_id": "P-104"
+      }
+    ],
+    "vehicles": [
+      {
+        "vin": "VIN-MERC-GLS-88901",
+        "vehicle_id": "VEH-101",
+        "license_plate": "MH-01-EE-0007",
+        "make": "Mercedes-Benz",
+        "model": "GLS 400d",
+        "color": "Obsidian Black",
+        "registered_owner": "Apex Horizon Trading Ltd",
+        "owner_person_id": "P-101"
+      },
+      {
+        "vin": "VIN-TOYOTA-FORT-4412",
+        "vehicle_id": "VEH-102",
+        "license_plate": "MH-46-BZ-5500",
+        "make": "Toyota",
+        "model": "Fortuner 4x4",
+        "color": "Pearl White",
+        "registered_owner": "Sameer Qureshi",
+        "owner_person_id": "P-102"
+      }
+    ],
+    "social_handles": [
+      {
+        "handle_id": "signal_ghost_vicky",
+        "platform": "Signal",
+        "handle": "ghost_vicky.88",
+        "associated_email": "vicky.roy.secure@proton.me",
+        "display_name": "V. Roy",
+        "owner_person_id": "P-101"
+      },
+      {
+        "handle_id": "telegram_sam_ops",
+        "platform": "Telegram",
+        "handle": "sam_falcon_ops",
+        "associated_email": "qureshi_operations@pm.me",
+        "display_name": "Sam Cargo",
+        "owner_person_id": "P-102"
+      }
+    ],
+    "ip_addresses": [
+      {
+        "ip_address": "103.241.144.12",
+        "ip_type": "IPV4",
+        "asn": "AS55836",
+        "isp": "Reliance Jio Enterprise Gateway"
+      }
+    ],
+    "cell_towers": [
+      {
+        "cell_tower_id": "TOWER-JNPT-09",
+        "tower_code": "LAC210-CID908",
+        "operator": "Airtel",
+        "latitude": 18.9482,
+        "longitude": 72.9515,
+        "location_id": "LOC-PORT-01"
+      },
+      {
+        "cell_tower_id": "TOWER-BKC-02",
+        "tower_code": "LAC105-CID301",
+        "operator": "Jio",
+        "latitude": 19.0657,
+        "longitude": 72.8686,
+        "location_id": "LOC-BKC-02"
+      }
+    ],
+    "locations": [
+      {
+        "location_id": "LOC-PORT-01",
+        "name": "JNPT Container Terminal Yard 4",
+        "address": "Nhava Sheva Port, Navi Mumbai",
+        "latitude": 18.9482,
+        "longitude": 72.9515,
+        "location_type": "INCIDENT_SITE"
+      },
+      {
+        "location_id": "LOC-BKC-02",
+        "name": "Imperial Financial Suites - BKC",
+        "address": "G Block, Bandra Kurla Complex, Mumbai",
+        "latitude": 19.0657,
+        "longitude": 72.8686,
+        "location_type": "MEETING_POINT"
+      }
+    ]
+  },
+  "relationships": {
+    "communications": [
+      {
+        "call_id": "CALL-2024-7701",
+        "source_phone": "+919811122334",
+        "target_phone": "+919822233445",
+        "type": "VOICE_CALL",
+        "timestamp": "2024-10-22T08:15:00Z",
+        "duration_seconds": 240,
+        "cell_tower": "TOWER-BKC-02",
+        "source_record_id": "CDR-TEL-7701"
+      },
+      {
+        "call_id": "CALL-2024-7702",
+        "source_phone": "+919822233445",
+        "target_phone": "+919833344556",
+        "type": "VOICE_CALL",
+        "timestamp": "2024-10-22T08:45:00Z",
+        "duration_seconds": 180,
+        "cell_tower": "TOWER-BKC-02",
+        "source_record_id": "CDR-TEL-7702"
+      },
+      {
+        "call_id": "CALL-2024-7703",
+        "source_phone": "+919822233445",
+        "target_phone": "+919844455667",
+        "type": "VOICE_CALL",
+        "timestamp": "2024-10-22T11:30:00Z",
+        "duration_seconds": 90,
+        "cell_tower": "TOWER-JNPT-09",
+        "source_record_id": "CDR-TEL-7703"
+      }
+    ],
+    "transactions": [
+      {
+        "transaction_id": "TX-2024-9901",
+        "source_account": "ACC-7701-APEX",
+        "target_account": "ACC-7702-MULE",
+        "amount": 2500000.0,
+        "currency": "INR",
+        "timestamp": "2024-10-22T09:10:00Z",
+        "transaction_type": "RTGS",
+        "reference_no": "RTGS-BKC-9901882",
+        "source_record_id": "STMT-SCB-OCT24"
+      },
+      {
+        "transaction_id": "TX-2024-9902",
+        "source_account": "ACC-7702-MULE",
+        "target_account": "ACC-7703-LOGISTICS",
+        "amount": 2350000.0,
+        "currency": "INR",
+        "timestamp": "2024-10-22T10:05:00Z",
+        "transaction_type": "IMPS",
+        "reference_no": "IMPS-HDFC-8821034",
+        "source_record_id": "STMT-HDFC-OCT24"
+      }
+    ]
+  },
+  "surveillance_logs": [
+    {
+      "log_id": "SURV-FALCON-01",
+      "location_id": "LOC-BKC-02",
+      "location_name": "Imperial Financial Suites - BKC",
+      "latitude": 19.0657,
+      "longitude": 72.8686,
+      "timestamp": "2024-10-22T08:30:00Z",
+      "observed_person_ids": ["P-101", "P-102"],
+      "observed_vehicle_vins": ["VIN-MERC-GLS-88901", "VIN-TOYOTA-FORT-4412"],
+      "observed_phone_numbers": ["+919811122334", "+919822233445"],
+      "activity_description": "Vicky Roy observed exchanging briefcase and encrypted smartphone with Sameer Qureshi in private lounge.",
+      "evidence_ref": "BKC-SURV-CAM09-0830.mp4",
+      "source_record_id": "SURV-FIELD-REPORT-22"
+    },
+    {
+      "log_id": "SURV-FALCON-02",
+      "location_id": "LOC-PORT-01",
+      "location_name": "JNPT Container Terminal Yard 4",
+      "latitude": 18.9482,
+      "longitude": 72.9515,
+      "timestamp": "2024-10-22T12:00:00Z",
+      "observed_person_ids": ["P-102", "P-104"],
+      "observed_vehicle_vins": ["VIN-TOYOTA-FORT-4412"],
+      "observed_phone_numbers": ["+919822233445", "+919844455667"],
+      "activity_description": "Sameer Qureshi arrived at dock office; Capt. Mehra permitted gate entry for unmanifested trailer.",
+      "evidence_ref": "DOCK-GATE-CCTV-1200.mp4",
+      "source_record_id": "CUSTOMS-LOG-22"
+    }
+  ],
+  "criminal_history": [
+    {
+      "record_id": "CRIM-VIK-01",
+      "person_id": "P-101",
+      "case_number": "DRI-MUM-2021-104",
+      "offense": "Customs Duty Evasion & Trade-Based Money Laundering",
+      "jurisdiction": "Special PMLA Court, Mumbai",
+      "status": "CHARGE_SHEETED",
+      "year": 2021,
+      "source_record_id": "DRI-CENTRAL-REGISTRY"
+    },
+    {
+      "record_id": "CRIM-SAM-01",
+      "person_id": "P-102",
+      "case_number": "POL-GOA-2022-55",
+      "offense": "Possession of Contraband & Forged Identity Documents",
+      "jurisdiction": "Panaji District Court",
+      "status": "BAIL_GRANTED",
+      "year": 2022,
+      "source_record_id": "CCTNS-CRIME-DATABASE"
+    }
+  ],
+  "intelligence_reports": [
+    {
+      "report_id": "INTEL-FALCON-01",
+      "source_agency": "Financial Intelligence Unit (FIU-IND)",
+      "date": "2024-10-21",
+      "reliability_score": 0.98,
+      "content": "Red-flag STR generated: Corporate account of Apex Horizon transferred 25 Lakhs to a dormant savings account belonging to student Arjun Nair, which was immediately wired to logistics escrows within 55 minutes.",
+      "entities_mentioned": ["P-101", "P-103", "P-104"],
+      "source_record_id": "FIU-STR-2024-8871"
+    }
+  ]
+}

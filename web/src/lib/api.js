@@ -4,23 +4,37 @@ const BASE = import.meta.env.VITE_API_URL || ''
 async function request(path, options = {}) {
   const isForm = options.body instanceof FormData
   const headers = isForm ? {} : { 'Content-Type': 'application/json' }
-  const res = await fetch(`${BASE}${path}`, {
-    headers: { ...headers, ...(options.headers || {}) },
-    ...options,
-  })
-  if (!res.ok) {
-    let detail = res.statusText
-    try {
-      const body = await res.json()
-      if (typeof body.detail === 'string') detail = body.detail
-      else if (Array.isArray(body.detail)) detail = body.detail.map(e => e.msg).join('; ')
-      else detail = body.message || detail
-    } catch { /* not JSON */ }
-    const err = new Error(detail || `HTTP ${res.status}`)
-    err.status = res.status
+  const controller = new AbortController()
+  const timeoutMs = options.timeout || 45000
+  const timeoutId = setTimeout(() => controller.abort(), timeoutMs)
+
+  try {
+    const res = await fetch(`${BASE}${path}`, {
+      headers: { ...headers, ...(options.headers || {}) },
+      signal: options.signal || controller.signal,
+      ...options,
+    })
+    if (!res.ok) {
+      let detail = res.statusText
+      try {
+        const body = await res.json()
+        if (typeof body.detail === 'string') detail = body.detail
+        else if (Array.isArray(body.detail)) detail = body.detail.map(e => e.msg).join('; ')
+        else detail = body.message || detail
+      } catch { /* not JSON */ }
+      const err = new Error(detail || `HTTP ${res.status}`)
+      err.status = res.status
+      throw err
+    }
+    return res.json()
+  } catch (err) {
+    if (err.name === 'AbortError') {
+      throw new Error('Request timed out. The backend server was waking up from cold storage. Please try again.')
+    }
     throw err
+  } finally {
+    clearTimeout(timeoutId)
   }
-  return res.json()
 }
 
 export const api = {

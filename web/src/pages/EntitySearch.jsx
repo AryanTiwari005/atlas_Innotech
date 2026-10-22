@@ -68,11 +68,12 @@ export default function EntitySearch() {
   const [loadingEntity, setLoadingEntity] = useState(false)
   const toast = useToast()
 
-  const doSearch = useCallback(async () => {
-    if (!query.trim()) { toast('Please enter a search query', 'info'); return }
+  const doSearch = useCallback(async (qOverride = null) => {
+    const q = (typeof qOverride === 'string' ? qOverride : query).trim()
+    if (!q) { toast('Please enter a search query', 'info'); return }
     setLoading(true)
     try {
-      const res = await api.entitySearch(query.trim(), type)
+      const res = await api.entitySearch(q, type)
       setResults(Array.isArray(res) ? res : [])
     } catch (e) {
       toast(e.message, 'err')
@@ -116,7 +117,20 @@ export default function EntitySearch() {
               {ENTITY_TYPES.map(t => <option key={t}>{t}</option>)}
             </select>
           </div>
-          <Btn variant="primary" onClick={doSearch} disabled={loading}>{loading ? 'Searching…' : 'Search'}</Btn>
+          <Btn variant="primary" onClick={() => doSearch()} disabled={loading}>{loading ? 'Searching…' : 'Search'}</Btn>
+        </div>
+        <div className="mt-3 flex flex-wrap items-center gap-2 text-xs">
+          <span className="text-mist-500">Quick Search:</span>
+          {['Devendra Sharma', 'Nirav Modi', 'Karan Singhania', '+919876543210'].map(term => (
+            <button
+              key={term}
+              type="button"
+              onClick={() => { setQuery(term); doSearch(term) }}
+              className="rounded-full bg-ink-800 border border-ink-600 px-3 py-1 text-mist-300 hover:border-alert hover:text-white transition"
+            >
+              🔍 {term}
+            </button>
+          ))}
         </div>
       </Section>
 

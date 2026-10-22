@@ -99,7 +99,24 @@ export default function ShortestPath() {
           </div>
           <Btn variant="primary" onClick={() => doPath()} disabled={loading}>{loading ? 'Tracing…' : 'Trace Path'}</Btn>
         </div>
-        <p className="mt-3 text-xs text-mist-500">
+        <div className="mt-3 flex flex-wrap items-center gap-2 text-xs">
+          <span className="text-mist-500">Quick Test Pairs:</span>
+          <button
+            type="button"
+            onClick={() => { setSuspect('Devendra Sharma'); setVictim('Rajiv Sen'); doPath('Devendra Sharma', 'Rajiv Sen') }}
+            className="rounded-full bg-ink-800 border border-ink-600 px-3 py-1 text-mist-300 hover:border-alert hover:text-white transition"
+          >
+            🎯 Devendra Sharma → Rajiv Sen
+          </button>
+          <button
+            type="button"
+            onClick={() => { setSuspect('P-001'); setVictim('P-002'); doPath('P-001', 'P-002') }}
+            className="rounded-full bg-ink-800 border border-ink-600 px-3 py-1 text-mist-300 hover:border-alert hover:text-white transition"
+          >
+            🔗 P-001 → P-002 (Shooter)
+          </button>
+        </div>
+        <p className="mt-2 text-xs text-mist-500">
           Ambiguity safe: if a name resolves to multiple persons, the system presents candidate keys for disambiguation.
         </p>
       </Section>

@@ -24,14 +24,15 @@ export default function Rankings() {
 
   useEffect(() => {
     api.cases().then(c => setCases(Array.isArray(c) ? c : [])).catch(() => {})
+    doRankings('degree', 'Person', '', '15')
   }, [])
 
-  const doRankings = async () => {
+  const doRankings = async (m = metric, l = label, cId = caseId, lim = limitVal) => {
     setLoading(true)
     setResults(null)
     try {
-      const params = { metric, label, limit: limitVal }
-      if (caseId) params.case_id = caseId
+      const params = { metric: m, label: l, limit: lim }
+      if (cId) params.case_id = cId
       const r = await api.rankings(params)
       setResults(r)
     } catch (e) {
