@@ -1,0 +1,226 @@
+{
+  "case_metadata": {
+    "case_id": "CASE-2026-003",
+    "case_name": "Harborline Cargo Diversion Investigation",
+    "case_type": "CARGO_THEFT_AND_FRAUD",
+    "status": "UNDER_INVESTIGATION",
+    "jurisdiction": "Fictional Harbor District Police",
+    "lead_investigator": "Inspector Alex Morgan (fictional)",
+    "created_date": "2026-09-12",
+    "summary": "Fictional training case concerning suspected diversion of a cargo shipment and related payments. All names, identifiers, and evidence in this file are synthetic.",
+    "tags": ["SyntheticTrainingData", "CargoDiversion", "FinancialInvestigation"]
+  },
+  "fir_records": [
+    {
+      "fir_id": "FIR-2026-003",
+      "fir_number": "TRAINING-003/2026",
+      "police_station": "Fictional Harbor District Station",
+      "date": "2026-09-12",
+      "sections": ["TRAINING-ONLY-SECTION-A", "TRAINING-ONLY-SECTION-B"],
+      "complainant": "Harborline Demo Logistics",
+      "summary": "Training record: a demo shipment was reported missing after a scheduled transfer. The incident and all associated evidence are fictional.",
+      "accused_person_ids": ["P-003-001", "P-003-002"]
+    }
+  ],
+  "entities": {
+    "people": [
+      {
+        "person_id": "P-003-001",
+        "name": "Casey Example",
+        "aliases": ["C. Example"],
+        "dob": "1987-04-18",
+        "roles": ["Suspect", "Logistics Coordinator"],
+        "risk_level": "HIGH",
+        "notes": "Fictional training subject. Listed as a shipment coordinator in the demo records."
+      },
+      {
+        "person_id": "P-003-002",
+        "name": "Jordan Sample",
+        "aliases": [],
+        "dob": "1991-11-03",
+        "roles": ["Suspect", "Account Holder"],
+        "risk_level": "MEDIUM",
+        "notes": "Fictional training subject. Associated with a synthetic account referenced in the demo transaction."
+      },
+      {
+        "person_id": "P-003-003",
+        "name": "Riley Demo",
+        "aliases": [],
+        "dob": "1979-02-22",
+        "roles": ["Witness", "Dispatcher"],
+        "risk_level": "LOW",
+        "notes": "Fictional training witness who reported the shipment discrepancy."
+      }
+    ],
+    "phones": [
+      {
+        "phone_number": "+12025550101",
+        "phone_id": "PH-003-001",
+        "carrier": "Example Wireless",
+        "registered_owner": "Casey Example",
+        "owner_person_id": "P-003-001"
+      },
+      {
+        "phone_number": "+12025550102",
+        "phone_id": "PH-003-002",
+        "carrier": "Example Wireless",
+        "registered_owner": "Jordan Sample",
+        "owner_person_id": "P-003-002"
+      },
+      {
+        "phone_number": "+12025550103",
+        "phone_id": "PH-003-003",
+        "carrier": "Example Wireless",
+        "registered_owner": "Riley Demo",
+        "owner_person_id": "P-003-003"
+      }
+    ],
+    "bank_accounts": [
+      {
+        "account_number": "TEST-ACCOUNT-003-001",
+        "account_id": "BA-003-001",
+        "bank_name": "Example Training Bank",
+        "account_type": "CURRENT",
+        "branch": "Fictional Harbor Branch",
+        "holder_name": "Casey Example",
+        "owner_person_id": "P-003-001"
+      },
+      {
+        "account_number": "TEST-ACCOUNT-003-002",
+        "account_id": "BA-003-002",
+        "bank_name": "Example Training Bank",
+        "account_type": "SAVINGS",
+        "branch": "Fictional Harbor Branch",
+        "holder_name": "Jordan Sample",
+        "owner_person_id": "P-003-002"
+      }
+    ],
+    "vehicles": [
+      {
+        "vin": "1FICT0000AB123456",
+        "vehicle_id": "VEH-003-001",
+        "license_plate": "TRAIN-003",
+        "make": "Example Motors",
+        "model": "Demo Van",
+        "color": "Blue",
+        "registered_owner": "Casey Example",
+        "owner_person_id": "P-003-001"
+      }
+    ],
+    "social_handles": [],
+    "ip_addresses": [
+      {
+        "ip_address": "203.0.113.44",
+        "ip_type": "IPV4",
+        "isp": "Example Networks"
+      }
+    ],
+    "cell_towers": [
+      {
+        "cell_tower_id": "TOWER-TRAIN-003",
+        "tower_code": "TRAIN-LAC-CID-003",
+        "operator": "Example Wireless",
+        "location_id": "LOC-TRAIN-003"
+      }
+    ],
+    "locations": [
+      {
+        "location_id": "LOC-TRAIN-003",
+        "name": "Example Harbor Depot",
+        "address": "100 Sample Road, Fictional Harbor District",
+        "latitude": 38.9000,
+        "longitude": -77.0000,
+        "location_type": "COMMERCIAL"
+      }
+    ]
+  },
+  "relationships": {
+    "communications": [
+      {
+        "call_id": "CALL-TRAIN-003-001",
+        "source_phone": "+12025550101",
+        "target_phone": "+12025550102",
+        "type": "VOICE_CALL",
+        "timestamp": "2026-09-11T14:20:00Z",
+        "duration_seconds": 95,
+        "cell_tower": "TOWER-TRAIN-003",
+        "source_record_id": "SRC-TRAIN-003-CDR"
+      },
+      {
+        "call_id": "CALL-TRAIN-003-002",
+        "source_phone": "+12025550103",
+        "target_phone": "+12025550101",
+        "type": "SMS",
+        "timestamp": "2026-09-11T15:05:00Z",
+        "duration_seconds": 0,
+        "cell_tower": "TOWER-TRAIN-003",
+        "source_record_id": "SRC-TRAIN-003-CDR"
+      }
+    ],
+    "transactions": [
+      {
+        "transaction_id": "TX-TRAIN-003-001",
+        "source_account": "TEST-ACCOUNT-003-001",
+        "target_account": "TEST-ACCOUNT-003-002",
+        "amount": 1250.00,
+        "currency": "USD",
+        "timestamp": "2026-09-11T16:30:00Z",
+        "transaction_type": "WIRE",
+        "reference_no": "TRAINING-REF-003-001",
+        "source_record_id": "SRC-TRAIN-003-BANK"
+      }
+    ]
+  },
+  "surveillance_logs": [
+    {
+      "log_id": "SURV-TRAIN-003-001",
+      "location_id": "LOC-TRAIN-003",
+      "location_name": "Example Harbor Depot",
+      "timestamp": "2026-09-11T15:40:00Z",
+      "observed_person_ids": ["P-003-001", "P-003-003"],
+      "observed_vehicle_vins": ["1FICT0000AB123456"],
+      "observed_phone_numbers": ["+12025550101"],
+      "activity_description": "Fictional training note: the coordinator and dispatcher were recorded at the demo depot before the shipment discrepancy was reported.",
+      "evidence_ref": "TRAINING-CCTV-003-001",
+      "source_record_id": "SRC-TRAIN-003-CCTV"
+    }
+  ],
+  "criminal_history": [],
+  "intelligence_reports": [
+    {
+      "report_id": "INTEL-TRAIN-003-001",
+      "source_agency": "Example Training Analysis Unit",
+      "date": "2026-09-12",
+      "reliability_score": 0.75,
+      "content": "Synthetic training lead only: review the recorded communication and payment timeline alongside the reported shipment discrepancy. This is not a real-world allegation.",
+      "entities_mentioned": ["P-003-001", "P-003-002"],
+      "source_record_id": "SRC-TRAIN-003-INTEL"
+    }
+  ],
+  "source_records": [
+    {
+      "source_record_id": "SRC-TRAIN-003-CDR",
+      "source_type": "CDR",
+      "record_type": "EVIDENCE",
+      "raw_reference": "synthetic-cdr-training-003.csv"
+    },
+    {
+      "source_record_id": "SRC-TRAIN-003-BANK",
+      "source_type": "BANK_STATEMENT",
+      "record_type": "EVIDENCE",
+      "raw_reference": "synthetic-bank-training-003.csv"
+    },
+    {
+      "source_record_id": "SRC-TRAIN-003-CCTV",
+      "source_type": "CCTV",
+      "record_type": "EVIDENCE",
+      "raw_reference": "synthetic-cctv-training-003.txt"
+    },
+    {
+      "source_record_id": "SRC-TRAIN-003-INTEL",
+      "source_type": "INTEL_MEMO",
+      "record_type": "WITNESS_STATEMENT",
+      "raw_reference": "synthetic-intel-training-003.txt"
+    }
+  ]
+}
