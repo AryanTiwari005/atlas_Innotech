@@ -113,16 +113,15 @@ app.include_router(ingest_router)
 app.include_router(events_router)
 
 
-@app.get("/", response_class=HTMLResponse, tags=["Dashboard"])
+@app.get("/", tags=["Dashboard"])
 def serve_dashboard():
-    """Serves the interactive Analyst Dashboard UI from frontend/ or templates/."""
-    frontend_path = Path(__file__).resolve().parent.parent / "frontend" / "index.html"
-    if frontend_path.exists():
-        return frontend_path.read_text(encoding="utf-8")
-    template_path = Path(__file__).resolve().parent / "templates" / "index.html"
-    if template_path.exists():
-        return template_path.read_text(encoding="utf-8")
-    return "<h1>AI-Powered Criminal Network Analysis System API (Dashboard template not found)</h1>"
+    """Root endpoint returning API status."""
+    return {
+        "status": "online",
+        "service": "Atlas Forensic Graph Intelligence API",
+        "docs": "/docs",
+        "neo4j": "connected"
+    }
 
 
 @app.head("/", tags=["Dashboard"], include_in_schema=False)
