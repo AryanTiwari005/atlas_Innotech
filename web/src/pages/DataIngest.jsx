@@ -55,9 +55,13 @@ export default function DataIngest() {
       toast('Please paste structured Case JSON', 'info')
       return
     }
+    let raw = jsonText.trim()
+    if (raw.startsWith('```')) {
+      raw = raw.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/, '').trim()
+    }
     let parsed
     try {
-      parsed = JSON.parse(jsonText.trim())
+      parsed = JSON.parse(raw)
     } catch (e) {
       toast(`Invalid JSON format: ${e.message}`, 'err')
       return

@@ -1,0 +1,202 @@
+{
+  "case_metadata": {
+    "case_id": "CASE-SERIAL-HOMICIDE-001",
+    "case_name": "Connected Serial Homicide Investigation (Taskforce Apex)",
+    "case_type": "HOMICIDE",
+    "status": "UNDER_INVESTIGATION",
+    "jurisdiction": "State Major Crimes Taskforce",
+    "lead_investigator": "Special Agent Marcus Vance",
+    "created_date": "2024-09-10",
+    "summary": "Serial homicide investigation connecting four murders through common suspect Alex Morgan and linked DNA-PROFILE-001 evidence."
+  },
+  "fir_records": [
+    {
+      "fir_id": "FIR-CASE-001",
+      "fir_number": "CASE-1-CARTER",
+      "police_station": "Metro Central Precinct",
+      "date": "2024-03-12",
+      "sections": ["Penal Code 187 (Murder)"],
+      "complainant": "Metro Homicide",
+      "summary": "Case 1: Murder of Emily Carter. Suspects of interest: Alex Morgan, Daniel Foster.",
+      "accused_person_ids": ["P-ALEX-MORGAN", "P-DANIEL-FOSTER", "P-EMILY-CARTER"]
+    },
+    {
+      "fir_id": "FIR-CASE-002",
+      "fir_number": "CASE-2-MILLER",
+      "police_station": "Northside Division",
+      "date": "2024-05-18",
+      "sections": ["Penal Code 187 (Murder)"],
+      "complainant": "Metro Homicide",
+      "summary": "Case 2: Murder of Sarah Miller. Suspects of interest: Alex Morgan, Ryan Mitchell.",
+      "accused_person_ids": ["P-ALEX-MORGAN", "P-RYAN-MITCHELL", "P-SARAH-MILLER"]
+    },
+    {
+      "fir_id": "FIR-CASE-003",
+      "fir_number": "CASE-3-BENNETT",
+      "police_station": "Harbor Industrial District",
+      "date": "2024-07-22",
+      "sections": ["Penal Code 187 (Murder)"],
+      "complainant": "Metro Homicide",
+      "summary": "Case 3: Murder of Laura Bennett. Suspects of interest: Alex Morgan, Lucas Bennett.",
+      "accused_person_ids": ["P-ALEX-MORGAN", "P-LUCAS-BENNETT", "P-LAURA-BENNETT"]
+    },
+    {
+      "fir_id": "FIR-CASE-004",
+      "fir_number": "CASE-4-BROOKS",
+      "police_station": "West Valley Substation",
+      "date": "2024-09-04",
+      "sections": ["Penal Code 187 (Murder)"],
+      "complainant": "Metro Homicide",
+      "summary": "Case 4: Murder of Megan Brooks. Suspects of interest: Alex Morgan, Oliver Reed.",
+      "accused_person_ids": ["P-ALEX-MORGAN", "P-OLIVER-REED", "P-MEGAN-BROOKS"]
+    }
+  ],
+  "entities": {
+    "people": [
+      {
+        "person_id": "P-ALEX-MORGAN",
+        "name": "Alex Morgan",
+        "roles": ["Common Suspect"],
+        "risk_level": "CRITICAL",
+        "notes": "Common suspect connected to Case 1, Case 2, Case 3, and Case 4. Matched to DNA-PROFILE-001."
+      },
+      {
+        "person_id": "P-EMILY-CARTER",
+        "name": "Emily Carter",
+        "roles": ["Victim"],
+        "risk_level": "LOW",
+        "notes": "Victim in Case 1."
+      },
+      {
+        "person_id": "P-SARAH-MILLER",
+        "name": "Sarah Miller",
+        "roles": ["Victim"],
+        "risk_level": "LOW",
+        "notes": "Victim in Case 2."
+      },
+      {
+        "person_id": "P-LAURA-BENNETT",
+        "name": "Laura Bennett",
+        "roles": ["Victim"],
+        "risk_level": "LOW",
+        "notes": "Victim in Case 3."
+      },
+      {
+        "person_id": "P-MEGAN-BROOKS",
+        "name": "Megan Brooks",
+        "roles": ["Victim"],
+        "risk_level": "LOW",
+        "notes": "Victim in Case 4."
+      },
+      {
+        "person_id": "P-DANIEL-FOSTER",
+        "name": "Daniel Foster",
+        "roles": ["Person of Interest"],
+        "risk_level": "HIGH",
+        "notes": "Connected to Case 1."
+      },
+      {
+        "person_id": "P-RYAN-MITCHELL",
+        "name": "Ryan Mitchell",
+        "roles": ["Person of Interest"],
+        "risk_level": "MEDIUM",
+        "notes": "Connected to Case 2."
+      },
+      {
+        "person_id": "P-LUCAS-BENNETT",
+        "name": "Lucas Bennett",
+        "roles": ["Person of Interest"],
+        "risk_level": "MEDIUM",
+        "notes": "Connected to Case 3."
+      },
+      {
+        "person_id": "P-OLIVER-REED",
+        "name": "Oliver Reed",
+        "roles": ["Person of Interest"],
+        "risk_level": "MEDIUM",
+        "notes": "Connected to Case 4."
+      }
+    ],
+    "phones": [],
+    "bank_accounts": [],
+    "vehicles": [],
+    "social_handles": [],
+    "ip_addresses": [],
+    "cell_towers": [],
+    "locations": []
+  },
+  "relationships": {
+    "communications": [],
+    "transactions": []
+  },
+  "surveillance_logs": [],
+  "criminal_history": [],
+  "intelligence_reports": [],
+  "source_records": [
+    {
+      "source_record_id": "DNA-001",
+      "source_type": "FORENSIC_EVIDENCE",
+      "record_type": "DNA_EVIDENCE",
+      "raw_reference": "CASE-1-CARTER",
+      "properties": {
+        "case_id": "CASE-1-CARTER",
+        "case_name": "Case 1 — Emily Carter",
+        "dna_evidence_id": "DNA-001",
+        "shared_profile_key": "DNA-PROFILE-001",
+        "linked_suspect": "Alex Morgan"
+      }
+    },
+    {
+      "source_record_id": "DNA-002",
+      "source_type": "FORENSIC_EVIDENCE",
+      "record_type": "DNA_EVIDENCE",
+      "raw_reference": "CASE-2-MILLER",
+      "properties": {
+        "case_id": "CASE-2-MILLER",
+        "case_name": "Case 2 — Sarah Miller",
+        "dna_evidence_id": "DNA-002",
+        "shared_profile_key": "DNA-PROFILE-001",
+        "linked_suspect": "Alex Morgan"
+      }
+    },
+    {
+      "source_record_id": "DNA-003",
+      "source_type": "FORENSIC_EVIDENCE",
+      "record_type": "DNA_EVIDENCE",
+      "raw_reference": "CASE-3-BENNETT",
+      "properties": {
+        "case_id": "CASE-3-BENNETT",
+        "case_name": "Case 3 — Laura Bennett",
+        "dna_evidence_id": "DNA-003",
+        "shared_profile_key": "DNA-PROFILE-001",
+        "linked_suspect": "Alex Morgan"
+      }
+    },
+    {
+      "source_record_id": "DNA-004",
+      "source_type": "FORENSIC_EVIDENCE",
+      "record_type": "DNA_EVIDENCE",
+      "raw_reference": "CASE-4-BROOKS",
+      "properties": {
+        "case_id": "CASE-4-BROOKS",
+        "case_name": "Case 4 — Megan Brooks",
+        "dna_evidence_id": "DNA-004",
+        "shared_profile_key": "DNA-PROFILE-001",
+        "linked_suspect": "Alex Morgan"
+      }
+    },
+    {
+      "source_record_id": "DNA-MOCK-REF-ALEX",
+      "source_type": "FORENSIC_REFERENCE",
+      "record_type": "TRAINING_COMPARISON",
+      "raw_reference": "STIPULATED-TRAINING-RESULT",
+      "properties": {
+        "subject_person_id": "P-ALEX-MORGAN",
+        "subject_name": "Alex Morgan",
+        "shared_profile_key": "DNA-PROFILE-001",
+        "comparison_result": "PREDEFINED_TRAINING_MATCH",
+        "notes": "Predefined training comparison linking Alex Morgan to shared profile DNA-PROFILE-001 across all four cases."
+      }
+    }
+  ]
+}
